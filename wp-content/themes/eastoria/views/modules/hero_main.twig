@@ -1,0 +1,16 @@
+
+<section class="hero-video-banner {{ function('is_front_page') ? '' : 'other-page' }}" id="hero" >
+    <div class="video-wrap">
+        <div class="content-wrap">
+            {# <h1> {{ module.title_main }}</h1> #}
+            <img src="{{ module.hero_logo.url }}" alt="{{ module.hero_logo.alt }}">
+            <p>{{ module.title_text }}</p>
+        </div>
+        <img class="poster" src="{{ module.image.url }}" alt="{{ module.image.alt }}">
+        <div class="player" data-video-id="{{ module.video_id }}"></div>
+
+        <div class="next-section-button">
+            <img class="" src="{{ module.next_section_button.url }}" alt="">
+        </div>
+    </div>
+</section>

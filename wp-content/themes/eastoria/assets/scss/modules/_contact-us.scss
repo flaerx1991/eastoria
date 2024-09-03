@@ -1,0 +1,171 @@
+.contact-us{
+   
+    background: linear-gradient(180deg, #201E1F 30.73%, #482C02 100%);
+    position: relative;
+
+    
+    .container{
+        width: 100%;
+        max-width: 1230px;
+        margin: 0 auto;
+        padding: 0 16px;
+        @media (min-width: $mediaTabletMax) {
+            padding-bottom: 100px;
+        }
+        .contact-us-content{
+           min-height: 454px;
+            @media (min-width: $mediaTabletMax) {
+                grid-template-columns: 1fr 0.734fr;
+                gap: 108px;
+                align-items: center;
+            }
+
+            .contacts-col{
+                position: relative;
+                padding-bottom: 100px;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    bottom: 50px;
+                    height: 1px;
+                    width: 100%;
+                    background-color: $gold;
+                    @media (min-width: $mediaTabletMin) {
+
+                    }
+                    @media (min-width: $mediaTabletMax) {
+                        bottom: -40px;
+                        right: 0;
+                        height: 454px;
+                        width: 1px;
+                    }
+                }
+                .contacts-content{
+                    margin-top: 41px;
+                    // align-items: center;
+                    flex-direction: column;
+                    row-gap: 40px;
+                    .contact-item{
+                        align-items: flex-start;
+                        flex-direction: column;
+                        @media (min-width: $mediaTabletMin) {
+                            flex-direction: row;
+                            align-items: center;
+                        }
+                        .name{
+                            color: $gold;
+                            font-size: 20px;
+                            line-height: 1.5;
+                            letter-spacing: 1.92px;
+                            text-transform: uppercase;
+                            @media (min-width: $mediaTabletMax) {
+                                font-size: 24px;
+                            }
+                        }
+                        .divider{
+                            display: none;
+                            @media (min-width: $mediaTabletMin) {
+                                display: block;
+                            }
+                        }
+    
+                        .name-link{
+                            color: $gold;
+                            font-weight: 300;
+                            font-size: 20px;
+                            line-height: 1.5;
+                            letter-spacing: 1.92px;
+                            text-transform: uppercase;
+                            @media (min-width: $mediaTabletMax) {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+           
+            .text-col{
+                .col-title{
+                    margin-bottom: 19px;
+                    text-align: center;
+                }
+                .form-col{
+                    margin-top: 18px;
+                    form{
+                        position: relative;
+                        .fields-wrap{
+                            input{
+                                width: 100%;
+                            }
+                            .field-wrap{
+                                &:not(:last-child){
+                                    margin-bottom: 20px;
+                                }
+                                input{
+                                    padding: 20px 30px;
+                                    border: 1px solid $gold2;
+                                    font-weight: 300;
+                                    font-size: 20px;
+                                    color: $gold;
+                                    border-radius: 10px;
+                                    letter-spacing: 1.92px;
+                                    font-family: inherit;
+                                    background: linear-gradient(70deg, rgba(0, 0, 0, 0.20) 62.88%, rgba(171, 142, 103, 0.20) 92.64%), rgba(34, 28, 28, 0.40);
+                                    @media (min-width: $mediaTabletMin) {
+                                        font-size: 24px;
+                                        padding: 26px 36px;
+                                    }
+                                    &::placeholder{
+                                        font-weight: 300;
+                                        color: $gold;
+                                        text-transform: uppercase;
+                                    }
+
+                                    &:focus {
+                                        outline: 0px solid $gold2;
+                                        // border: none;
+                                        border: 1px solid $gold2;
+                                    }
+                                }
+                            }
+                        }
+
+                        .wpcf7-submit{
+                            font-size: 25px;
+                            border-radius: 10px;
+                            transition: .3s all;
+                            cursor: pointer;
+                            width: 100%;
+                            max-width: 384px;
+                            font-family: inherit;
+                            height: 67px;
+                            margin: 0 auto;
+                            margin-top: 31px;
+                            border: 1px solid $brown2;
+                            background: rgba($brown3, 0.59);
+                            color: $black1;
+                            text-transform: uppercase;
+                            display: block;
+                            @media (min-width: $mediaTabletMin) {
+                                height: 87px;
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .background-contacts{
+        position: absolute;
+        top: -255px;
+        right: 0;
+
+        img{
+            width: 100%;
+        }
+    }
+}

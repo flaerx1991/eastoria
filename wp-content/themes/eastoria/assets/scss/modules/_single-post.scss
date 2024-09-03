@@ -1,0 +1,89 @@
+.post-content{
+    .container{
+        background: linear-gradient(0deg, #482C02 0%, #201E1F 58.33%);
+       
+        .back-button-wrap{
+            padding: 22px 16px;
+            position: relative;
+            z-index: 1;
+            a{
+                text-decoration: none;
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                .back-arrow{
+                    border: 1px solid $gold;
+                    width: 47px;
+                    height: 47px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        transform: rotate(180deg);
+                        filter: invert(72%) sepia(63%) saturate(254%) hue-rotate(2deg) brightness(89%) contrast(87%);
+                    }
+                }
+    
+                p{
+                    font-size: 28px;
+                    text-transform: uppercase;
+                    margin-left: 25px;
+                }
+               
+            }
+        }
+        .heading-banner{
+            position: relative;
+            z-index: 1;
+            .text-col{
+                time{
+                    color: $white;
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .post-content-block-wrap{
+           
+           padding: 100px 16px 50px;
+           position: relative;
+           z-index: 1;
+            @media (min-width: $mediaDesktopMid) {
+                padding: 100px 0 50px;
+            }
+            .post-content{
+                padding: 20px;
+                font-size: 20px;
+                width: 100%;
+                max-width: 1024px;
+                margin: 0 auto;
+                background-color: transparent;
+                position: relative;
+                color: $gold;
+                // box-shadow: 1px -1px 8px 0px rgba(0,0,0,0.44);
+
+                &::before{
+                    content:'';
+                    position:absolute;
+                    height:30px;
+                    width: 30px;
+                    top: 0;
+                    left: 0;
+                    border-left: 5px solid $gold;
+                    border-top: 5px solid $gold;
+                }
+
+                &::after{
+                    content:'';
+                    position:absolute;
+                    height:30px;
+                    width: 30px;
+                    bottom: 0;
+                    right: 0;
+                    border-right: 5px solid $gold;
+                    border-bottom: 5px solid $gold;
+                }
+            }
+        }
+    }
+}

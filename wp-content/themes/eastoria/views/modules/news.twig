@@ -1,0 +1,30 @@
+<section  id="news" class="news">
+    <div class="container">
+        <div class="main-content">
+            <div class="section-heading">
+                <h3>{{ module.title_text }}</h3>
+            </div>
+            <div class="news-container grid">
+                {% for post_item in module.news_posts %}
+                    <div class="news-col">
+                        <div class="img-col">
+                            <img class="news-image" src="{{post_item.thumbnail.src}}" alt="{{ post_item.title }}" >
+                        </div>
+                        <div class="news-content">
+                            <p class="post-title">{{ post_item.title }}</p>
+                            <div class="post-preview">{{ post_item.content|slice(0, 255)}}...</div>
+                            <a href="{{post_item.link}}" class="post-link button">
+                                <p>{{ module.know_more_text }}</p>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %} 
+            </div>
+            <a href="{{ module.blog_link.url }}" class="btn-archive-page button"><p>{{ module.blog_link.title }}</p></a>
+        </div>
+        
+        {# <div class="back-image"><img src="{{ module.image.url }}" alt="{{ module.image.alt }}"></div> #}
+       
+    </div>
+</section>
+

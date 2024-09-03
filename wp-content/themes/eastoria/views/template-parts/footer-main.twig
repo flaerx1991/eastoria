@@ -1,0 +1,55 @@
+<footer>
+    <div class="container">
+        <div class="footer-content grid">
+
+                <div class="menu-logo-col">
+                    <div class="logo-col">
+                        <img src="{{ options.footer_logo.url }}" alt="{{ options.footer_logo.url }}">
+                    </div>
+
+                    <ul class="footer-menu-col menu-ul flex">
+                        {% for menu_item in options.footer_menu %}
+                            <li class="footer-menu-item">
+                                <a href="{{ menu_item.footer_link.url }}" class="">{{ menu_item.footer_link.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="media-col">
+                    <p>{{ options.social_media_text }}</p>
+                    <div class="media-links-content flex">
+                        {% for menu_media in options.footer_media_links %}
+                            
+                            <a href="{{  menu_media.media_link.url }}" class=""> <img src="{{  menu_media.media_image.url }}" alt="{{  menu_media.media_image.alt }}"> </a>
+                            
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+
+            <div class="credentials-col flex">
+               
+                <p class="font-roboto">{{ options.credentials_text }}</p>
+            </div>
+        </div>
+
+        
+    </div>
+    
+    <div class="back-footer {{ function('is_front_page') ? "" : "post-page" }}"><img src="{{ options.footer_background.url }}" alt=""></div>
+   
+    
+</footer>
+
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+
+{# <link rel="stylesheet" id="swiper-css" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?ver=6.3" type="text/css" media="all">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?ver=6.3" id="swiper-js"></script> #}
+
+{# <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> #}

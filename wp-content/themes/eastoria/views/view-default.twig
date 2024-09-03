@@ -1,0 +1,9 @@
+{% extends 'main.twig' %}
+
+{% block content %}
+    <div class="content" id="main-content">
+        {% for module in post.get_field('flex_modules') %}
+            {% include ['modules/', module.acf_fc_layout ~'.twig'] %}
+        {% endfor %}
+    </div>
+{% endblock %}

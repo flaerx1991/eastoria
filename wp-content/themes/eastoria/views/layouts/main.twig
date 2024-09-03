@@ -1,0 +1,22 @@
+{% block html_head_container %}
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+    {% include 'head-main.twig' %}
+{% endblock %}
+
+    <body>
+        {{ options.opening_body_scripts }}
+
+        {% include 'header-main.twig' %}
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        {% block footer %}
+            {% include 'footer-main.twig' %}
+            {{ function('wp_footer') }}
+            {{ options.closing_body_scripts }}
+        {% endblock %}
+    </body>
+</html>

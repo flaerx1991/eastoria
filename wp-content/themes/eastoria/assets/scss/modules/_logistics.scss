@@ -1,0 +1,38 @@
+.logistics {
+    background: linear-gradient(180deg, #201E1F 0%, #482C02 100%);
+    position: relative;
+
+   
+
+    .container {
+        width: 100%;
+        max-width: 1237px;
+        margin: 0 auto;
+        position: relative;
+        padding: 76px 16px 102px 16px;
+        @media (min-width: $mediaDesktopMid) {
+            padding: 76px 0 102px 0;
+    
+        }
+        .section-heading {
+            // margin-bottom:76px ;
+        }
+
+        .logistics-content {
+            img {
+                position: relative;
+               
+                margin: 0 auto;
+                display: block;
+                width: 100%;
+                @media (min-width: $mediaTabletMin) {
+                    
+                }
+                @media (min-width: $mediaTabletMax) {
+                    top: -36px;
+                }
+            }
+        }
+
+    }
+}

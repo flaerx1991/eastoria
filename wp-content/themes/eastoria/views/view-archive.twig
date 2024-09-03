@@ -1,0 +1,38 @@
+{% extends "main.twig" %}
+
+{% block content %}
+    <div class="blog-content">
+        <div class="container">
+
+            <div class="heading-banner">
+                <div class="text-col font-roboto"><h2>{{ options.blog_title }}</h2></div>
+                
+                <img src="{{ options.banner_image.url }}" alt="">
+            </div>
+            <div class="posts-wrap">
+                {% if posts|length > 0 %}
+                    <div class="posts grid">
+                        {% for post in posts %} 
+                            <div class="news-col">
+                                <div class="img-col">
+                                    <img class="news-image" src="{{post.thumbnail.src}}" alt="{{ post.title }}" >
+                                </div>
+                                <div class="news-content">
+                                    <p class="post-title">{{ post.title }}</p>
+                                    <div class="post-preview">{{ post.content|slice(0, 255)}}...</div>
+                                    <a href="{{post.link}}" class="post-link button">
+                                        <p> {{ options.post_know_more_text }}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %} 
+                    </div>
+                {% else %}
+                <div>Nothing found</div>
+                {% endif %}
+            </div>
+           
+        </div>
+        
+    </div> 
+{% endblock %}

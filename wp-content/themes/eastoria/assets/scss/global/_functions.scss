@@ -1,0 +1,40 @@
+@function rem-calc($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@function em-calc($size) {
+    $emSize: $size / 16px;
+    @return #{$emSize}em;
+}
+
+@mixin bordient($radius, $width, $color1, $color2, $color3: $color2, $color4: $color1) {
+    
+    background-image:
+        radial-gradient(circle at 100% 100%, transparent #{$radius - $width}, $color1 #{$radius - $width}, $color1 #{$radius}, transparent #{$radius}),
+        linear-gradient(to right, $color1, $color2),
+        radial-gradient(circle at 0% 100%, transparent #{$radius - $width}, $color2 #{$radius - $width}, $color2 #{$radius}, transparent #{$radius}),
+        linear-gradient(to bottom, $color2, $color3),
+        radial-gradient(circle at 0% 0%, transparent #{$radius - $width}, $color3 #{$radius - $width}, $color3 #{$radius}, transparent #{$radius}),
+        linear-gradient(to left, $color3, $color4),
+        radial-gradient(circle at 100% 0%, transparent #{$radius - $width}, $color4 #{$radius - $width}, $color4 #{$radius}, transparent #{$radius}),
+        linear-gradient(to top, $color4, $color1);
+    
+    background-position:
+        top left,
+        top center,
+        top right,
+        center right,
+        bottom right,
+        bottom center,
+        bottom left,
+        center left;
+    
+    background-size:
+        #{$radius} #{$radius},
+        calc(100% - (2 * #{$radius})) #{$width},
+        #{$radius} #{$radius},
+        #{$width} calc(100% - (2 * #{$radius}));
+    
+    background-repeat: no-repeat;
+}

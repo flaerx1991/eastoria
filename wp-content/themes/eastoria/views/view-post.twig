@@ -1,0 +1,32 @@
+{% extends 'main.twig' %}
+
+{% block content %}
+    <div class="post-content">
+        <div class="container">
+            <div class="heading-banner">
+                <div class="text-col font-roboto"><h2>{{ post.title }}</h2> <time class="font-ubuntu">{{ post.date('F j,Y') }}</time></div>
+                <img src="{{ post.thumbnail.src }}" alt="">
+            </div>
+            
+           <div class="back-button-wrap">
+                 <a href="#" class="font-roboto back-button"> 
+                    <div class="back-arrow">
+                        <img src="{{ theme.link ~ "/assets/images/arrow.svg"}}" alt="">
+                    </div>
+                    <p>{{ module.back_button_link.title }}</p>
+                </a>
+            </div>
+            <div class="post-content-block-wrap">
+                <div class="post-content">
+                    {{ post.content }}
+                </div>
+            </div>
+            {# <div class="post-meta">
+                <div>Written by {{post.author}}   <time>{{ post.date('F j,Y') }}</time></div>
+            </div> #}
+        </div> 
+        
+      
+       
+    </div>
+{% endblock %}

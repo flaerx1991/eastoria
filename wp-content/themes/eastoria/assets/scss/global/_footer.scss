@@ -1,0 +1,147 @@
+footer{
+    position: relative;
+    background: linear-gradient(180deg, #482C02 0%, #201E1F 100%);
+    
+    .container{
+        padding: 150px 16px 20px ;
+        @media (min-width: $mediaTabletMin) {
+            padding: 150px 16px 0 ;
+        }
+       
+        @media (min-width: $mediaTabletMax) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .footer-content{
+            width: 100%;
+            max-width: 1230px;
+            
+            // align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            row-gap: 39px;
+            column-gap: 116px;
+            
+            // padding: 0 16px;
+            @media (min-width: $mediaTabletMin) {
+                grid-template-columns: 1.5fr 0.7fr;
+                grid-template-rows: 1fr 0.1fr;
+            }
+            @media (min-width: $mediaTabletMax) {
+                grid-template-columns: 1.3fr 0.7fr;
+                grid-template-rows: 1fr 0.1fr;
+                column-gap: 258px;
+            }
+            @media (min-width: $mediaDesktopMid) {
+                grid-template-columns: 1fr 0.7fr;
+            }
+            .menu-logo-col{
+                
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+                @media (min-width: $mediaTabletMin) {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 87px;
+                    justify-content: space-between;
+                    grid-row: 1;
+                }
+                @media (min-width: $mediaTabletMax) {
+                    column-gap: 142px;
+                }
+
+                .logo-col{
+                    grid-column: 2;
+                    @media (min-width: $mediaTabletMin) {
+                        grid-column: unset;
+                    }
+                    img{
+                        width: 177px;
+                    }
+                }
+
+                .footer-menu-col{
+                    grid-column: 1;
+                    grid-row: 1;
+                    flex-direction: column;                    
+                    @media (min-width: $mediaTabletMin) {
+                        grid-column: unset;
+                    }
+                    .footer-menu-item{
+                        a{
+                            text-decoration: none;
+                            font-size: 24px;
+                            line-height: 40px;
+                            color: $gold;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+            }
+           
+            .media-col{
+                grid-row: 2;
+                @media (min-width: $mediaTabletMin) {
+                    grid-row: 1;
+                }
+                p{
+                    font-size: 20px;
+                    line-height: 40px;
+                    color: $gold;
+                    text-transform: uppercase;
+                    margin-bottom: 21px;
+                    text-align: center;
+                    @media (min-width: $mediaTabletMax) {
+                        font-size: 24px;
+                    }
+                }
+
+                .media-links-content{
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 60px;
+                }
+            }
+
+           
+
+            .credentials-col{
+                grid-row: 3;
+                grid-column: 1/-1;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                @media (min-width: $mediaTabletMin) {
+                    grid-row: 2;
+                    text-align: unset;
+                }
+                p{
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    color: $gold;
+                    letter-spacing: -0.4px;
+                    
+                }
+
+                
+            }
+        }
+    }
+    .post-page{
+        z-index: 0;   
+    }
+    .back-footer{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+}

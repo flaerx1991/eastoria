@@ -1,0 +1,17 @@
+<section class="our-values" id="our-values">
+    <div class="container">
+        <div class="section-heading">
+             <h3>{{module.title_text }}</h3>
+        </div>
+        <div class="our-values-content flex">
+            {% for item in module.counters %}
+                <div class="counter-item">
+                    <p class="number-counter" data-count = "{{ item.number }}">0</p>
+                    <img src="{{ theme.link ~ "/assets/images/slash-divider.svg"}}" alt="" class="divider">
+                    <p class="name">{{ item.name }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="background-our-values"> <img src="{{ module.image.url }}" alt="{{ module.image.alt }}"> </div>
+</section>

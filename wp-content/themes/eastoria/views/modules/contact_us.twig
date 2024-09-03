@@ -1,0 +1,29 @@
+<section class="contact-us" id="contact-us">
+    <div class="container">
+        <div class="contact-us-content grid">
+            <div class="contacts-col">
+                <h3>{{ module.title_text }}</h3>
+                
+                <div class="contacts-content flex">
+                    {% for con_item in module.contacts %}
+                        <div class="contact-item flex">
+                            <p class="name">{{ con_item.name }}</p>
+                            <img src="{{ theme.link ~ "/assets/images/slash-divider.svg"}}" alt="" class="divider">
+                            <a href="{{ con_item.link.url }}" class="name-link">{{ con_item.link.title }}</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="text-col">
+                <h3 class="col-title">{{ module.title_secondary }}</h3>
+                <div class="form-col">
+                    {{ function('do_shortcode', '[contact-form-7 id="326" title="Request"]') }}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+     <div class="background-contacts"> <img src="{{ module.image.url }}" alt="{{ module.image.alt }}"> </div>
+</section>

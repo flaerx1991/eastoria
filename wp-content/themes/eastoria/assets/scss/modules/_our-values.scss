@@ -1,0 +1,89 @@
+.our-values{
+    background: linear-gradient(180deg, #201E1F 30.73%, #482C02 100%);
+    position: relative;
+
+    
+    .container{
+        width: 100%;
+        max-width: 1237px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+
+        padding: 50px 16px 100px 16px;
+        @media (min-width: $mediaDesktopMid) {
+            padding: 168px 0 134.5px 0;
+        }
+        
+        .section-heading{
+            margin-bottom:76px ;
+        }
+        .our-values-content {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            row-gap: 50px;
+            @media (min-width: $mediaTabletMin) {
+                justify-content: center;
+            }
+            .counter-item{
+                display: flex;
+                align-items: center;
+                
+
+                @media (min-width: $mediaTabletMin) {
+                    width: 33.3%;
+                }
+                .number-counter{
+                    font-size: 36px;
+                    color: $gold2;
+                    text-transform: uppercase;
+                    line-height: 1;
+                    @media (min-width: $mediaTabletMin) {
+
+                    }
+                    @media (min-width: $mediaTabletMax) {
+                        font-size: 56px;
+                        letter-spacing: 4.48px;
+                    }
+                }
+                img{
+
+                }
+                .name{
+                    text-transform: uppercase;
+                    line-height: normal;
+                    color: $gold2;
+                    @media (min-width: $mediaTabletMin) {
+                        font-size: 15px;
+                        padding-left: 6px;
+                    }
+                    @media (min-width: $mediaTabletMax) {
+                        font-size: 24px;
+                        letter-spacing: 1.92px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .background-our-values{
+        position: absolute;
+        left: 0;
+       
+        z-index: 1;
+        mix-blend-mode: hard-light;
+        top: 211px;
+        overflow: hidden;
+        @media (min-width: $mediaTabletMin) {
+            top: 117px;
+        }
+        img{
+            width: 150%;
+            @media (min-width: $mediaTabletMin) {
+                width: 100%;
+            }
+        }
+    }
+}

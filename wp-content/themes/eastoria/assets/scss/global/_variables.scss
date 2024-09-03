@@ -1,0 +1,39 @@
+
+/* Colors */
+$white:#ffffff;
+$black:#000000;
+$black1:#201E1F;
+
+$gray: #f2f2f7;
+
+$gray1: #EBEBEF;
+$gray2: #CFD2D4;
+$gray3: #f5f5f7;
+$gray4: #EFEFEF;
+$gray5: #f9f9fb;
+
+$gold: #CDAF71;
+$gold2: #AB8E67;
+$gold3: #C1AA8B;
+$brown: #2B1D0E;
+$brown2: #604E3A;
+$brown3: #75624A;
+// Breakpoints 
+$mediaMobileMin: 375px;
+$mediaMobileMax: 425px;
+$mediaTabletMin: 768px;
+$mediaTabletMax: 1024px;
+$wrapper: 1110px;
+$mediaDesktopMid: 1440px;
+$mediaDesktopFHD: 1920px;
+$mediaDesktopLarge: 2560px;
+
+//375px;    @media (min-width: $mediaMobileMin) {}
+//425px;    @media (min-width: $mediaMobileMax) {}
+//768px;    @media (min-width: $mediaTabletMin) {}
+//1024px;   @media (min-width: $mediaTabletMax) {}
+//1440px;   @media (min-width: $mediaDesktopMid) {}
+//1920px;   @media (min-width: $mediaDesktopFHD) {}
+//2560px;   @media (min-width: $mediaDesktopLarge) {}
+
+  

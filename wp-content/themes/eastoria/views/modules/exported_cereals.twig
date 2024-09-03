@@ -1,0 +1,26 @@
+<section class="exported-cereals" id="exported-cereals">
+    <div class="container">
+        <div class="section-heading">
+             <h3>{{module.title_text }}</h3>
+        </div>
+        <div class="exported-cereals-cards grid">
+            {% for card in module.cards %}
+               <div class="card-item">
+                    <div class="card-content">
+                        <div class="front-side">
+                            {% if card.image.url is not empty %}
+                                <img src="{{ card.image.url }}" alt="{{ card.image.alt }}">
+                            {% endif %}
+                            {% if card.name is not empty %}
+                                <div class="name">
+                                    <p>{{ card.name }}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="background-cards"> <img src="{{ module.image.url }}" alt="{{ module.image.alt }}"> </div>
+</section>

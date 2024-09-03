@@ -1,0 +1,155 @@
+.hero-video-banner{
+    background-color: black;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        background: linear-gradient(66deg, rgba(0, 0, 0, 0.88) 27.14%, rgba(2, 2, 2, 0.00) 126.63%);
+        inset: 0;
+        width: 100vw;
+        z-index: 1;
+        @media (min-width: $mediaTabletMax) {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.88) 46.08%, rgba(2, 2, 2, 0.00) 99.71%);
+        }
+        
+    }
+    .video-wrap{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        
+        .content-wrap{
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1226px;
+            margin: 0 auto;
+            height: 100%;
+            display: grid;
+            // align-content: end;
+            grid-auto-rows: min-content;
+            gap: rem-calc(25px);
+            align-content: flex-start;
+            padding: 10px 16px 0;
+            @media (min-width: $mediaTabletMin) {
+                align-content: center;
+                gap: rem-calc(41px);
+                padding: 28px 16px 0;
+            }
+            @media (min-width: $mediaTabletMax) {
+                padding: 185px 16px 0;
+                align-content: unset;
+            }
+            
+            @media (min-width: $mediaDesktopMid) {
+                padding: 185px 0 0;
+                
+            }
+            
+            img{
+                max-width: 83px;
+                @media (min-width: $mediaTabletMin) {
+                    max-width: max-content;
+                }
+            }
+            p{
+                font-weight: 300;
+                // font-size: 30px;
+               
+                color: $gold;
+                text-align: left;
+                text-transform: uppercase;
+                font-size: 20px;
+                letter-spacing: 6px;
+                line-height: 1.5;
+                @media (min-width: $mediaTabletMin) {
+                    font-size: 30px;
+                    
+                }
+            }
+        }
+
+        .poster{
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            transition: 1s;
+        }
+
+        .poster.hidden{
+            opacity: 0;
+        }
+
+        .player{
+            z-index: 0;
+            aspect-ratio: 16/9;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            
+            @media (min-aspect-ratio: 16/9) {
+                height: 56.25vw;
+            }
+            @media (max-aspect-ratio: 16/9) {
+                width: 177.78vh;
+            }
+        }
+
+        .next-section-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            position: absolute;
+            left: 50%;
+            bottom: rem-calc(144px);
+            transform: translateX(-50%);
+           
+            width: rem-calc(23px);
+            height: rem-calc(23px);
+            
+            cursor: pointer;
+            @media (min-width: $mediaTabletMax) {
+                bottom: rem-calc(39px);
+            }
+            img{
+                position: relative;
+                transform: rotate(90deg);
+                filter: invert(90%) sepia(17%) saturate(1176%) hue-rotate(336deg) brightness(83%) contrast(91%);
+                width: 100%;
+                
+                @media (min-width: $mediaTabletMax) {
+                    padding: 0px;
+                    width: unset;
+                }
+            }
+        }
+    }
+}
+
+.other-page{
+
+    &::after{
+        content: '';
+        position: absolute;
+        background-color: rgba(26, 23, 27, 0.35);
+        inset: 0;
+        z-index: 1;
+    }
+    .video-wrap{
+        height: 566px;
+
+        .next-section-button{
+            display: none;
+        }
+    }
+}

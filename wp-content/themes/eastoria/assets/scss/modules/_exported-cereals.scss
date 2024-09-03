@@ -1,0 +1,315 @@
+.exported-cereals {
+    background: linear-gradient(180deg, #482C02 0%, #201E1F 58.33%);
+    
+    position: relative;
+    .container {
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 16px;
+        @media (min-width: $mediaTabletMin) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        @media (min-width: $mediaTabletMax) {
+            padding: 0px 0 76px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 36px;
+            @media (min-width: $mediaTabletMax) {
+                margin-left: 29px;
+                position: relative;
+                top: 152px;
+            }
+        }
+
+        
+
+        .exported-cereals-cards {
+            display: grid;
+            margin: 0 auto;
+            perspective: 1200px;
+            width: 100%;
+            max-width: 922px;
+            row-gap: 51px;
+            @media (min-width: $mediaTabletMin) {
+                grid-template-columns: 1fr 1fr;
+                column-gap: 62px;
+                row-gap: 51px;
+            }
+            @media (min-width: $mediaTabletMax) {
+                grid-template-columns:1fr 1fr 1fr 1fr;
+                grid-template-rows: repeat(4, max-content);
+                column-gap: 55px;
+                // top: -152px;
+            }
+            .card-item {
+
+                position: relative;
+
+                @media (max-width: $mediaTabletMax - 1 ) {
+                     &:first-child{
+                        display: none;
+                    }
+                    &:nth-child(even){
+                        .card-content{
+                            
+                            .front-side{
+                                .name{
+                                    
+                                    padding-left: 82px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(odd){
+                        .card-content{
+                            border-radius: 50% 0 50% 0;
+                            .front-side{
+                                .name{
+                                    padding-right: 82px;
+                                }
+                            }
+                        }
+                    }   
+                }
+                @media (min-width: $mediaTabletMax) {
+                    &:first-child{
+                        grid-row: 1;
+                        grid-column: 1/-1;
+                        display: flex;
+                        justify-content: center;
+                        .card-content{
+                            transform: rotate(45deg);
+                            border-radius: 0px 103px 0px 92px / 0px 104px 0px 116px;
+                            width: 188px;
+                            height: 186px;
+                            background: linear-gradient(90deg, #F9E181 -283.3%, #835C2D 403.82%);
+                            &:hover {
+                                filter: drop-shadow(4px 4px 12px $gold);
+                                border: 2.4px solid $gold2;
+                                transition: all 0.5s;
+                                transform: matrix3d(1,
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        -0.00019,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        1),
+                                rotate(45deg) !important;
+                            }
+                            .front-side{
+                                transform: rotate(-45deg);
+                                height: calc(100% + 76px);
+                                width: calc(100% + 76px);
+                                top: -43px;
+                                left: -43px;
+                                .name{
+                                    bottom: 27px;
+                                }
+                            }
+    
+                        }
+                    }
+                    &:nth-child(4n+2):not(:nth-child(12n+10)){
+                        grid-column: 1;
+                        // border: 1px solid blue;
+                        display: flex;
+                        justify-content: end;
+                        top: 156px;
+                        .card-content{
+                            height: 170px;
+                            width: 170px;
+                            .front-side{
+                                .name{
+                                    padding-left: 37px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(4n+3):not(:nth-child(12n+11)){
+                        // border: 1px solid red;
+                        grid-column: 2;
+                        .card-content{
+                            .front-side{
+                                .name{
+                                    padding-left: 37px;
+                                    padding-right: 20px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(4n+4):not(:nth-child(12n+12)){
+                        // border: 1px solid yellow;
+                        grid-column: 3;
+                        .card-content{
+                            border-radius: 50% 0 50% 0;
+    
+                            .front-side{
+                                .name{
+                                    padding-right: 37px;
+                                    padding-left: 20px;
+                                }
+                            }
+                        }
+                    
+                    }
+                    &:nth-child(4n+5):not(:nth-child(12n+13)){
+                        // border: 1px solid orange;
+                        grid-column: 4;
+                        display: flex;
+                        justify-content: start;
+                        top: 156px;
+                        .card-content{
+                            height: 170px;
+                            width: 170px;
+                            border-radius: 50% 0 50% 0;
+                            .front-side{
+                                .name{
+                                    padding-right: 37px;
+                                    padding-left: 20px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(12n+10){
+                        // border: 1px solid red;
+                        grid-column: 2;
+                        .card-content{
+                           
+                            .front-side{
+                                .name{
+                                    padding-left: 37px;
+                                    padding-right: 20px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(12n+11){
+                        // border: 1px solid violet;
+                        .card-content{
+                            border-radius: 50% 0 50% 0;
+                            .front-side{
+                                .name{
+                                    padding-right: 37px;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .card-content{
+                   
+                    position: relative;
+                    @media (min-width: $mediaTabletMin) {
+
+                    }
+                    @media (min-width: $mediaTabletMax) {
+                        height: 188px;
+                    }
+                   
+                    aspect-ratio: 1/1;
+                    transition: all 0.5s;
+                    background: transparent;
+                    border-radius: 0 50% 0 50%;
+                    border: 2.4px solid transparent;
+                    overflow: hidden;
+                    cursor: pointer;
+                    &:not(:first-child){
+                        
+                    }
+                    &:hover {
+                        filter: drop-shadow(4px 4px 12px $gold);
+                        border: 2.4px solid $gold2;
+                        transition: all 0.5s;
+                        transform: matrix3d(1,
+                                0,
+                                0,
+                                0,
+                                0,
+                                1,
+                                0,
+                                -0.00019,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                0,
+                                1);
+                        // top: -4px;
+                    }
+    
+                    .front-side{
+                       
+                        height: 100%;
+                        backface-visibility: visible;
+                        position: absolute;
+                        width: 100%;
+                       
+                    }
+    
+                    .front-side {
+                        // height: 100%;
+                        transition: opacity .5s;
+                        opacity: 1;
+                        display: flex;
+                        // transform: rotateX(0deg);
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            aspect-ratio: 1/1;
+                            // object-position: center;   
+                            // border-radius: 0 50% 0 50%;
+                        }
+    
+                        .name{
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            // border-radius: 0px 0px 36px 36px;
+                            
+                            background: rgba($brown, 0.68);
+                            width: 100%;
+                            min-height: 60px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            
+                            p{
+                                color: $gold3;
+                                font-size: 20px;
+                                text-align: center;
+                                line-height: 1;
+                                letter-spacing: 1.5px;
+                                text-transform: uppercase;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .background-cards{
+        position: absolute;
+        bottom: -60px;
+        right: 0;
+        z-index: 0;
+        mix-blend-mode: hard-light;
+    }
+}

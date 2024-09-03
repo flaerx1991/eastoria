@@ -1,0 +1,18 @@
+<section class="about-us" id="about-us">
+    <div class="container">
+        <div class="about-us-content grid">
+           
+            <div class="info-col">
+                <h3>{{module.title_text }}</h3>
+                <div class="info-col-content">
+                    {{ module.text_col }}
+                </div>
+            </div>
+            
+             <div class="img-col">
+                <img src="{{ module.image_col.url }}" alt="{{ module.image_col.url }}">
+            </div>
+        </div>
+    </div>
+    <div class="background-about-us"> <img src="{{ module.image.url }}" alt="{{ module.image.alt }}"> </div>
+</section>
